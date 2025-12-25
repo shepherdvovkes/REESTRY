@@ -1,0 +1,676 @@
+Изучаю структуру проекта и ключевые файлы.
+
+
+[4 tools called]
+
+
+Изучаю структуру проекта и код краулера и процессора.
+
+
+[4 tools called]
+
+
+Изучаю код краулера и архитектуру обработки данных:
+
+
+[4 tools called]
+
+
+Проверяю дополнительные файлы для полноты картины:
+
+
+[3 tools called]
+
+
+## Анализ решения и рекомендации
+
+### 1. Получение данных из открытых источников в полном объёме
+
+Проблемы:
+- Нет механизма отслеживания прогресса загрузки
+- Нет обработки частичных сбоев
+- Нет стратегии для разных типов источников (API, файлы, веб-страницы)
+- Нет механизма обнаружения новых источников
+
+Рекомендации:
+
+```python
+# 1. Добавить систему отслеживания источников и прогресса
+# Создать таблицу в PostgreSQL:
+CREATE TABLE data_sources (
+    id SERIAL PRIMARY KEY,
+    url TEXT UNIQUE NOT NULL,
+    source_type VARCHAR(50),  -- api, file, web, registry
+    domain VARCHAR(255),
+    status VARCHAR(50),  -- pending, downloading, completed, failed, partial
+    total_records INTEGER,
+    downloaded_records INTEGER DEFAULT 0,
+    last_successful_download TIMESTAMP,
+    last_attempt TIMESTAMP,
+    error_message TEXT,
+    retry_count INTEGER DEFAULT 0,
+    metadata JSONB,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_status ON data_sources(status);
+CREATE INDEX idx_source_type ON data_sources(source_type);
+
+# 2. Реализовать адаптеры для разных типов источников
+class DataSourceAdapter:
+    """Базовый класс для адаптеров источников данных"""
+    
+    def estimate_total(self) -> int:
+        """Оценка общего количества записей"""
+        pass
+    
+    def download_incremental(self, offset: int, limit: int) -> List[Dict]:
+        """Инкрементальная загрузка с пагинацией"""
+        pass
+    
+    def supports_incremental(self) -> bool:
+        """Поддерживает ли источник инкрементальную загрузку"""
+        pass
+
+class APISourceAdapter(DataSourceAdapter):
+    """Адаптер для REST API"""
+    def __init__(self, base_url: str, auth: Optional[Dict] = None):
+        self.base_url = base_url
+        self.auth = auth
+    
+    def download_incremental(self, offset: int, limit: int):
+        # Реализация с пагинацией
+        pass
+
+class FileSourceAdapter(DataSourceAdapter):
+    """Адаптер для файлов (CSV, JSON, XML)"""
+    def download_incremental(self, offset: int, limit: int):
+        # Чтение файла по частям
+        pass
+
+class WebSourceAdapter(DataSourceAdapter):
+    """Адаптер для веб-страниц с пагинацией"""
+    def download_incremental(self, offset: int, limit: int):
+        # Парсинг HTML с пагинацией
+        pass
+
+# 3. Реализовать менеджер загрузки с возобновлением
+class DataDownloadManager:
+    def __init__(self, db_conn):
+        self.db = db_conn
+        self.adapters = {
+            'api': APISourceAdapter,
+            'file': FileSourceAdapter,
+            'web': WebSourceAdapter
+        }
+    
+    def resume_download(self, source_id: int):
+        """Возобновление прерванной загрузки"""
+        source = self.db.get_source(source_id)
+        adapter = self.adapters[source['source_type']](source['url'])
+        
+        # Продолжаем с места остановки
+        offset = source['downloaded_records']
+        while True:
+            batch = adapter.download_incremental(offset, limit=1000)
+            if not batch:
+                break
+            
+            # Сохраняем батч
+            self.save_batch(source_id, batch)
+            
+            # Обновляем прогресс
+            offset += len(batch)
+            self.db.update_progress(source_id, offset)
+    
+    def discover_new_sources(self):
+        """Периодическое обнаружение новых источников"""
+        # Использовать краулер для поиска новых источников
+        # Проверять data.gov.ua на новые датасеты
+        pass
+```
+
+Дополнительно:
+- Параллельная загрузка из разных источников
+- Очередь задач (Celery/RQ) для фоновой загрузки
+- Мониторинг доступности источников
+
+---
+
+### 2. Проверка соответствия загруженных данных исходным
+
+Проблемы:
+- Нет механизма проверки целостности
+- Нет сравнения с исходными данными
+- Нет версионирования данных
+
+Рекомендации:
+
+```python
+import hashlib
+import json
+from typing import Dict, List, Tuple
+
+class DataIntegrityChecker:
+    """Система проверки целостности данных"""
+    
+    def __init__(self, db_conn):
+        self.db = db_conn
+    
+    def calculate_content_hash(self, data: Dict) -> str:
+        """Вычисление хеша содержимого записи"""
+        # Нормализуем данные для хеширования
+        normalized = self._normalize_for_hash(data)
+        content_str = json.dumps(normalized, sort_keys=True, ensure_ascii=False)
+        return hashlib.sha256(content_str.encode('utf-8')).hexdigest()
+    
+    def _normalize_for_hash(self, data: Dict) -> Dict:
+        """Нормализация данных для хеширования (убираем метаданные)"""
+        # Убираем поля, которые могут меняться при загрузке
+        exclude_fields = {'downloaded_at', 'updated_at', 'id', 'internal_id'}
+        return {k: v for k, v in data.items() if k not in exclude_fields}
+    
+    def store_source_fingerprint(self, source_url: str, records: List[Dict]):
+        """Сохранение отпечатка исходных данных"""
+        fingerprints = []
+        for record in records:
+            fp = {
+                'content_hash': self.calculate_content_hash(record),
+                'record_id': record.get('id') or record.get('_id'),
+                'source_url': source_url,
+                'timestamp': datetime.utcnow()
+            }
+            fingerprints.append(fp)
+        
+        # Сохраняем в таблицу fingerprints
+        self.db.save_fingerprints(fingerprints)
+    
+    def verify_downloaded_data(self, source_id: int) -> Dict:
+        """Проверка соответствия загруженных данных исходным"""
+        source = self.db.get_source(source_id)
+        downloaded_records = self.db.get_downloaded_records(source_id)
+        
+        # Загружаем исходные данные для сравнения
+        original_records = self._fetch_original_data(source['url'])
+        
+        # Сравнение
+        comparison = {
+            'total_original': len(original_records),
+            'total_downloaded': len(downloaded_records),
+            'missing_records': [],
+            'mismatched_records': [],
+            'extra_records': [],
+            'integrity_score': 0.0
+        }
+        
+        # Создаем индексы для быстрого поиска
+        original_by_id = {r.get('id'): r for r in original_records}
+        downloaded_by_id = {r.get('id'): r for r in downloaded_records}
+        
+        # Проверяем каждую запись
+        for orig_id, orig_record in original_by_id.items():
+            if orig_id not in downloaded_by_id:
+                comparison['missing_records'].append(orig_id)
+            else:
+                # Сравниваем хеши
+                orig_hash = self.calculate_content_hash(orig_record)
+                down_hash = self.calculate_content_hash(downloaded_by_id[orig_id])
+                
+                if orig_hash != down_hash:
+                    comparison['mismatched_records'].append({
+                        'id': orig_id,
+                        'original_hash': orig_hash,
+                        'downloaded_hash': down_hash,
+                        'differences': self._find_differences(orig_record, downloaded_by_id[orig_id])
+                    })
+        
+        # Находим лишние записи
+        for down_id in downloaded_by_id:
+            if down_id not in original_by_id:
+                comparison['extra_records'].append(down_id)
+        
+        # Вычисляем score целостности
+        if comparison['total_original'] > 0:
+            matched = comparison['total_original'] - len(comparison['missing_records']) - len(comparison['mismatched_records'])
+            comparison['integrity_score'] = matched / comparison['total_original']
+        
+        return comparison
+    
+    def _find_differences(self, original: Dict, downloaded: Dict) -> List[str]:
+        """Находит различия между записями"""
+        differences = []
+        all_keys = set(original.keys()) | set(downloaded.keys())
+        
+        for key in all_keys:
+            orig_val = original.get(key)
+            down_val = downloaded.get(key)
+            
+            if orig_val != down_val:
+                differences.append(f"{key}: '{orig_val}' != '{down_val}'")
+        
+        return differences
+
+# Расширение схемы БД для хранения метаданных целостности
+CREATE TABLE data_integrity (
+    id SERIAL PRIMARY KEY,
+    source_id INTEGER REFERENCES data_sources(id),
+    record_id TEXT,
+    content_hash VARCHAR(64) NOT NULL,
+    original_hash VARCHAR(64),  -- Хеш из исходного источника
+    verification_status VARCHAR(50),  -- verified, mismatch, missing
+    last_verified TIMESTAMP,
+    differences JSONB,
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_content_hash ON data_integrity(content_hash);
+CREATE INDEX idx_source_record ON data_integrity(source_id, record_id);
+
+# Таблица для хранения снимков исходных данных
+CREATE TABLE source_snapshots (
+    id SERIAL PRIMARY KEY,
+    source_id INTEGER REFERENCES data_sources(id),
+    snapshot_date TIMESTAMP DEFAULT NOW(),
+    total_records INTEGER,
+    records_hash VARCHAR(64),  -- Хеш всех записей вместе
+    metadata JSONB
+);
+
+# Реализация периодической проверки
+class IntegrityMonitor:
+    """Мониторинг целостности данных"""
+    
+    def schedule_verification(self, source_id: int, interval_hours: int = 24):
+        """Планирование периодической проверки"""
+        # Использовать Celery или cron для периодических проверок
+        pass
+    
+    def verify_all_sources(self):
+        """Проверка всех источников"""
+        sources = self.db.get_all_active_sources()
+        results = []
+        
+        for source in sources:
+            try:
+                result = self.checker.verify_downloaded_data(source['id'])
+                results.append({
+                    'source_id': source['id'],
+                    'source_url': source['url'],
+                    'integrity_score': result['integrity_score'],
+                    'status': 'ok' if result['integrity_score'] >= 0.99 else 'warning'
+                })
+            except Exception as e:
+                results.append({
+                    'source_id': source['id'],
+                    'status': 'error',
+                    'error': str(e)
+                })
+        
+        return results
+```
+
+Дополнительно:
+- Периодические автоматические проверки (например, раз в сутки)
+- Алерты при расхождениях
+- Восстановление данных при обнаружении проблем
+
+---
+
+### 3. Подготовка датасета для постоянного дообучения модели
+
+Проблемы:
+- Нет механизма инкрементального обновления датасета
+- Нет версионирования датасетов
+- Нет отслеживания изменений в данных
+- Нет формата для инкрементального обучения
+
+Рекомендации:
+
+```python
+from datetime import datetime
+from typing import List, Dict, Optional
+import json
+
+class MLDatasetManager:
+    """Менеджер датасетов для ML обучения"""
+    
+    def __init__(self, db_conn):
+        self.db = db_conn
+    
+    def create_dataset_version(self, name: str, description: str = "") -> int:
+        """Создание новой версии датасета"""
+        version = {
+            'name': name,
+            'description': description,
+            'created_at': datetime.utcnow(),
+            'status': 'preparing',
+            'total_samples': 0,
+            'metadata': {}
+        }
+        return self.db.create_dataset_version(version)
+    
+    def prepare_training_dataset(self, 
+                                version_id: int,
+                                filters: Optional[Dict] = None,
+                                min_length: int = 1000) -> Dict:
+        """Подготовка датасета для обучения"""
+        # Получаем документы согласно фильтрам
+        documents = self.db.get_documents_for_training(
+            filters=filters,
+            min_length=min_length
+        )
+        
+        # Формируем датасет в формате для обучения
+        dataset = {
+            'version_id': version_id,
+            'samples': [],
+            'metadata': {
+                'total_documents': len(documents),
+                'created_at': datetime.utcnow().isoformat(),
+                'filters': filters,
+                'min_length': min_length
+            }
+        }
+        
+        for doc in documents:
+            sample = self._format_for_training(doc)
+            dataset['samples'].append(sample)
+        
+        # Сохраняем датасет
+        self.db.save_dataset(version_id, dataset)
+        
+        return {
+            'version_id': version_id,
+            'total_samples': len(dataset['samples']),
+            'size_mb': self._estimate_size(dataset)
+        }
+    
+    def _format_for_training(self, doc: Dict) -> Dict:
+        """Форматирование документа для обучения"""
+        return {
+            'id': doc['document_id'],
+            'text': self._prepare_text(doc),
+            'metadata': {
+                'title': doc.get('title'),
+                'type': doc.get('document_type'),
+                'number': doc.get('document_number'),
+                'date': doc.get('date'),
+                'source_url': doc.get('url')
+            }
+        }
+    
+    def _prepare_text(self, doc: Dict) -> str:
+        """Подготовка текста для обучения"""
+        # Формируем текст в формате для fine-tuning
+        parts = []
+        
+        if doc.get('title'):
+            parts.append(f"=== {doc['title']} ===")
+        
+        if doc.get('document_type'):
+            parts.append(f"Type: {doc['document_type']}")
+        
+        if doc.get('document_number'):
+            parts.append(f"Number: {doc['document_number']}")
+        
+        parts.append("")  # Пустая строка
+        parts.append(doc.get('content', ''))
+        
+        return "\n".join(parts)
+    
+    def get_incremental_updates(self, 
+                                last_version_id: int,
+                                since_date: Optional[datetime] = None) -> List[Dict]:
+        """Получение инкрементальных обновлений для дообучения"""
+        # Находим документы, добавленные или измененные после последней версии
+        last_version = self.db.get_dataset_version(last_version_id)
+        
+        if since_date is None:
+            since_date = last_version['created_at']
+        
+        # Получаем новые/измененные документы
+        new_docs = self.db.get_documents_modified_since(since_date)
+        
+        # Формируем инкрементальный датасет
+        incremental = []
+        for doc in new_docs:
+            sample = self._format_for_training(doc)
+            sample['change_type'] = 'new' if doc['created_at'] > since_date else 'updated'
+            incremental.append(sample)
+        
+        return incremental
+    
+    def create_incremental_dataset(self, 
+                                   base_version_id: int,
+                                   new_samples: List[Dict]) -> int:
+        """Создание инкрементального датасета для дообучения"""
+        base_version = self.db.get_dataset_version(base_version_id)
+        
+        # Создаем новую версию на основе предыдущей
+        new_version_id = self.create_dataset_version(
+            name=f"{base_version['name']}_incremental_{datetime.utcnow().strftime('%Y%m%d')}",
+            description=f"Incremental update from version {base_version_id}"
+        )
+        
+        # Сохраняем только новые/измененные образцы
+        incremental_dataset = {
+            'version_id': new_version_id,
+            'base_version_id': base_version_id,
+            'samples': new_samples,
+            'metadata': {
+                'total_samples': len(new_samples),
+                'created_at': datetime.utcnow().isoformat(),
+                'is_incremental': True
+            }
+        }
+        
+        self.db.save_dataset(new_version_id, incremental_dataset)
+        
+        return new_version_id
+
+# Расширение схемы БД для версионирования датасетов
+CREATE TABLE dataset_versions (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    status VARCHAR(50),  -- preparing, ready, training, archived
+    total_samples INTEGER DEFAULT 0,
+    size_mb FLOAT,
+    base_version_id INTEGER REFERENCES dataset_versions(id),
+    metadata JSONB,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE dataset_samples (
+    id SERIAL PRIMARY KEY,
+    version_id INTEGER REFERENCES dataset_versions(id),
+    document_id TEXT,
+    sample_data JSONB NOT NULL,  -- Форматированные данные для обучения
+    sample_hash VARCHAR(64),  -- Хеш для дедупликации
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_version_id ON dataset_samples(version_id);
+CREATE INDEX idx_sample_hash ON dataset_samples(sample_hash);
+
+# Таблица для отслеживания изменений документов
+CREATE TABLE document_changes (
+    id SERIAL PRIMARY KEY,
+    document_id TEXT NOT NULL,
+    change_type VARCHAR(50),  -- created, updated, deleted
+    old_content_hash VARCHAR(64),
+    new_content_hash VARCHAR(64),
+    changed_at TIMESTAMP DEFAULT NOW(),
+    metadata JSONB
+);
+
+CREATE INDEX idx_document_changes ON document_changes(document_id, changed_at);
+
+# Реализация автоматического обнаружения изменений
+class ChangeDetector:
+    """Обнаружение изменений в документах"""
+    
+    def detect_changes(self, source_id: int) -> List[Dict]:
+        """Обнаружение изменений в источниках"""
+        source = self.db.get_source(source_id)
+        
+        # Загружаем текущие данные из источника
+        current_data = self._fetch_current_data(source['url'])
+        
+        # Загружаем сохраненные данные
+        saved_data = self.db.get_saved_data(source_id)
+        
+        # Сравниваем и находим изменения
+        changes = []
+        
+        # Индексируем сохраненные данные
+        saved_by_id = {r.get('id'): r for r in saved_data}
+        
+        for current_record in current_data:
+            record_id = current_record.get('id')
+            
+            if record_id not in saved_by_id:
+                # Новая запись
+                changes.append({
+                    'document_id': record_id,
+                    'change_type': 'created',
+                    'new_data': current_record
+                })
+            else:
+                # Проверяем на изменения
+                saved_record = saved_by_id[record_id]
+                if self._has_changes(current_record, saved_record):
+                    changes.append({
+                        'document_id': record_id,
+                        'change_type': 'updated',
+                        'old_data': saved_record,
+                        'new_data': current_record,
+                        'changes': self._get_field_changes(saved_record, current_record)
+                    })
+        
+        # Проверяем удаленные записи
+        current_ids = {r.get('id') for r in current_data}
+        for saved_id, saved_record in saved_by_id.items():
+            if saved_id not in current_ids:
+                changes.append({
+                    'document_id': saved_id,
+                    'change_type': 'deleted',
+                    'old_data': saved_record
+                })
+        
+        # Сохраняем изменения
+        self.db.save_changes(changes)
+        
+        return changes
+    
+    def _has_changes(self, old: Dict, new: Dict) -> bool:
+        """Проверка наличия изменений"""
+        old_hash = self._calculate_hash(old)
+        new_hash = self._calculate_hash(new)
+        return old_hash != new_hash
+
+# Автоматический пайплайн для инкрементального обучения
+class IncrementalTrainingPipeline:
+    """Пайплайн для инкрементального обучения"""
+    
+    def __init__(self, dataset_manager: MLDatasetManager, change_detector: ChangeDetector):
+        self.dataset_manager = dataset_manager
+        self.change_detector = change_detector
+    
+    def run_incremental_update(self, 
+                              base_version_id: int,
+                              min_new_samples: int = 100) -> Optional[int]:
+        """Запуск инкрементального обновления датасета"""
+        # 1. Обнаруживаем изменения во всех источниках
+        all_changes = []
+        sources = self.db.get_all_active_sources()
+        
+        for source in sources:
+            try:
+                changes = self.change_detector.detect_changes(source['id'])
+                all_changes.extend(changes)
+            except Exception as e:
+                logger.error(f"Error detecting changes in source {source['id']}: {e}")
+        
+        if len(all_changes) < min_new_samples:
+            logger.info(f"Not enough changes ({len(all_changes)} < {min_new_samples})")
+            return None
+        
+        # 2. Формируем инкрементальный датасет
+        new_samples = []
+        for change in all_changes:
+            if change['change_type'] in ['created', 'updated']:
+                sample = self.dataset_manager._format_for_training(change['new_data'])
+                sample['change_type'] = change['change_type']
+                new_samples.append(sample)
+        
+        # 3. Создаем новую версию датасета
+        new_version_id = self.dataset_manager.create_incremental_dataset(
+            base_version_id,
+            new_samples
+        )
+        
+        logger.info(f"Created incremental dataset version {new_version_id} with {len(new_samples)} samples")
+        
+        return new_version_id
+    
+    def schedule_incremental_updates(self, interval_hours: int = 24):
+        """Планирование периодических обновлений"""
+        # Использовать Celery Beat или cron
+        # Запускать run_incremental_update периодически
+        pass
+
+# Формат экспорта для обучения
+def export_for_training(version_id: int, format: str = 'jsonl') -> str:
+    """Экспорт датасета в формате для обучения"""
+    dataset = db.get_dataset(version_id)
+    
+    if format == 'jsonl':
+        # JSON Lines формат (каждая строка - JSON объект)
+        output = []
+        for sample in dataset['samples']:
+            output.append(json.dumps(sample, ensure_ascii=False))
+        return '\n'.join(output)
+    
+    elif format == 'text':
+        # Текстовый формат для fine-tuning
+        output = []
+        for sample in dataset['samples']:
+            output.append(sample['text'])
+            output.append("\n" + "="*80 + "\n")
+        return '\n'.join(output)
+    
+    elif format == 'huggingface':
+        # Формат для HuggingFace Datasets
+        # Структурированный формат для transformers
+        pass
+```
+
+Дополнительно:
+- Планировщик для автоматического обнаружения изменений
+- Метрики качества датасета (распределение по типам, длина текста и т.д.)
+- Дедупликация образцов
+- Балансировка классов (если применимо)
+
+---
+
+## Итоговые рекомендации по приоритетам
+
+1. Высокий приоритет:
+   - Система проверки целостности данных (хеширование, сравнение)
+   - Версионирование датасетов
+   - Механизм возобновления загрузки
+
+2. Средний приоритет:
+   - Инкрементальное обнаружение изменений
+   - Автоматические периодические проверки
+   - Мониторинг и алертинг
+
+3. Низкий приоритет:
+   - Оптимизация производительности
+   - Расширенная аналитика
+   - UI для управления датасетами
+
+Эти рекомендации помогут создать надежную систему для работы с открытыми данными с возможностью постоянного дообучения моделей.

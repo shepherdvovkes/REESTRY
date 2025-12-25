@@ -44,8 +44,14 @@ class LLMCrawler:
         self.lmstudio_url = lmstudio_url or config.LMSTUDIO_URL
         self.model = model or config.LMSTUDIO_MODEL
         
-        # LLM клиент
-        self.llm = LLMClient(self.lmstudio_url, self.model, timeout=config.LLM_TIMEOUT)
+        # LLM клиент с логированием
+        self.llm = LLMClient(
+            self.lmstudio_url, 
+            self.model, 
+            timeout=config.LLM_TIMEOUT,
+            enable_logging=True,
+            algorithm_step="crawler"
+        )
         
         # URL management
         self.visited_urls: Set[str] = set()
@@ -59,6 +65,7 @@ class LLMCrawler:
             'api_endpoints': 0,
             'registries': 0,
             'data_files': 0,
+            'rss_feeds': 0,
             'errors': 0
         }
         
@@ -210,7 +217,12 @@ URL: {url}
     "reasoning": "краткое объяснение"
 }}"""
 
-        response = self.llm.call(user_prompt, system_prompt, temperature=0.2)
+        response = self.llm.call(
+            user_prompt, 
+            system_prompt, 
+            temperature=0.2,
+            algorithm_step="llm_analyze_page"
+        )
         result = self.llm.parse_json_response(response)
         
         if result:
@@ -258,10 +270,12 @@ URL: {url}
 4. Файлы данных (.csv, .json, .xml, завантажити)
 5. Документацию API
 6. Страницы поиска в реестрах
+7. RSS/Atom feeds (/feed, /rss, /atom, .rss, .xml с RSS-структурой, ссылки с текстом "RSS", "Feed", "Подписка")
+8. Источники обновлений данных (новости, изменения, обновления)
 
 Для каждой релевантной ссылки определи:
-- Приоритет (1-10, где 1 = очень важно)
-- Тип источника (registry, api, data_file, documentation)
+- Приоритет (1-10, где 1 = очень важно, RSS-фиды должны иметь приоритет 2-3)
+- Тип источника (registry, api, data_file, documentation, rss)
 - Уверенность (1-10)
 
 Верни JSON массив:
@@ -279,7 +293,12 @@ URL: {url}
 
 Если релевантных ссылок нет, верни пустой массив []."""
 
-        response = self.llm.call(user_prompt, system_prompt, temperature=0.2)
+        response = self.llm.call(
+            user_prompt, 
+            system_prompt, 
+            temperature=0.2,
+            algorithm_step="llm_extract_relevant_links"
+        )
         result = self.llm.parse_json_response(response)
         
         if isinstance(result, list):
@@ -387,6 +406,24 @@ URL: {url}
                     self.stats['relevant_found'] += 1
                     print(f"   ✅ Relevant source found!")
                 
+                # Извлечение RSS-ссылок (всегда, независимо от релевантности)
+                print(f"   📡 Searching for RSS feeds...")
+                rss_links = self.extract_rss_links(html_content, url)
+                for rss_info in rss_links:
+                    rss_url = rss_info.get('url')
+                    if rss_url and rss_url not in self.visited_urls and self.is_relevant_domain(rss_url):
+                        priority = rss_info.get('priority', 3)
+                        self.stats['rss_feeds'] += 1
+                        
+                        new_task = CrawlTask(
+                            url=rss_url,
+                            priority=priority,
+                            depth=task.depth + 1,
+                            source_type='rss'
+                        )
+                        self.url_queue.put((priority, new_task))
+                        print(f"      📡 Found RSS feed: {rss_url} (priority {priority})")
+                
                 # Извлечение ссылок
                 if page_analysis.get('relevance', 0) >= 5:
                     # Используем LLM для умного извлечения
@@ -416,6 +453,8 @@ URL: {url}
                                 self.stats['registries'] += 1
                             elif source_type == 'data_file':
                                 self.stats['data_files'] += 1
+                            elif source_type == 'rss':
+                                self.stats['rss_feeds'] += 1
                             
                             # Добавляем в очередь
                             new_task = CrawlTask(
@@ -457,6 +496,7 @@ URL: {url}
         print(f"   API endpoints: {self.stats['api_endpoints']}")
         print(f"   Registries: {self.stats['registries']}")
         print(f"   Data files: {self.stats['data_files']}")
+        print(f"   RSS feeds: {self.stats['rss_feeds']}")
         print(f"   Errors: {self.stats['errors']}")
         print(f"   Queue size: {self.url_queue.qsize()}")
         print(f"   Visited: {len(self.visited_urls)}")

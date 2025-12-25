@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REESTRY - Управление датасетами и промптами</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>REESTRY</h1>
+            <div class="stats-bar" id="statsBar">
+                <div class="stat-item">
+                    <span class="stat-label">Промпты:</span>
+                    <span class="stat-value" id="promptsCount">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">LLM вызовов:</span>
+                    <span class="stat-value" id="llmCallsCount">-</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Датасеты:</span>
+                    <span class="stat-value" id="datasetsCount">-</span>
+                </div>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="prompts">Промпты</button>
+            <button class="tab-btn" data-tab="datasets">Датасеты</button>
+            <button class="tab-btn" data-tab="history">История обработки</button>
+            <button class="tab-btn" data-tab="algorithm">Алгоритм</button>
+        </nav>
+
+        <!-- Вкладка Промпты -->
+        <div class="tab-content active" id="prompts-tab">
+            <div class="section-header">
+                <h2>Управление промптами</h2>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="promptsSearch" placeholder="Поиск промптов..." oninput="filterPrompts()">
+                        <select id="promptsFilterStatus" onchange="filterPrompts()">
+                            <option value="">Все статусы</option>
+                            <option value="active">Активные</option>
+                            <option value="inactive">Неактивные</option>
+                        </select>
+                        <select id="promptsFilterStep" onchange="filterPrompts()">
+                            <option value="">Все шаги</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" onclick="showCreatePromptModal()" title="Ctrl+N">+ Создать промпт</button>
+                </div>
+            </div>
+            <div class="prompts-grid" id="promptsGrid">
+                <div class="loading-state">Загрузка промптов...</div>
+            </div>
+        </div>
+
+        <!-- Вкладка Датасеты -->
+        <div class="tab-content" id="datasets-tab">
+            <div class="section-header">
+                <h2>Управление датасетами</h2>
+                <button class="btn btn-primary" onclick="showCreateDatasetModal()">+ Создать датасет</button>
+            </div>
+            <div class="datasets-list" id="datasetsList">
+                <div class="loading-state">Загрузка датасетов...</div>
+            </div>
+        </div>
+
+        <!-- Вкладка История обработки -->
+        <div class="tab-content" id="history-tab">
+            <div class="section-header">
+                <h2>История LLM обработки <span class="realtime-badge"><span class="dot"></span> Realtime</span></h2>
+                <div class="filters">
+                    <select id="historyFilterStep" onchange="loadHistory()">
+                        <option value="">Все шаги алгоритма</option>
+                    </select>
+                    <select id="historyFilterPrompt" onchange="loadHistory()">
+                        <option value="">Все промпты</option>
+                    </select>
+                    <input type="number" id="historyLimit" value="50" min="10" max="500" onchange="loadHistory()" placeholder="Лимит">
+                </div>
+            </div>
+            <div class="history-list" id="historyList">
+                <div class="loading-state">Загрузка истории...</div>
+            </div>
+        </div>
+
+        <!-- Вкладка Алгоритм -->
+        <div class="tab-content" id="algorithm-tab">
+            <div class="section-header">
+                <h2>Точки обработки LLM в алгоритме</h2>
+            </div>
+            <div class="algorithm-flow" id="algorithmFlow"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для создания/редактирования промпта -->
+    <div id="promptModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePromptModal()">&times;</span>
+            <h2 id="promptModalTitle">Создать промпт</h2>
+            <form id="promptForm">
+                <input type="hidden" id="promptId">
+                <div class="form-group">
+                    <label>Название *</label>
+                    <input type="text" id="promptName" required>
+                </div>
+                <div class="form-group">
+                    <label>Описание</label>
+                    <textarea id="promptDescription" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Шаг алгоритма *</label>
+                    <select id="promptAlgorithmStep" required>
+                        <option value="">Выберите шаг</option>
+                        <option value="llm_analyze_page">Анализ страницы (llm_analyze_page)</option>
+                        <option value="llm_extract_relevant_links">Извлечение ссылок (llm_extract_relevant_links)</option>
+                        <option value="llm_parse_document">Парсинг документа</option>
+                        <option value="llm_classify_content">Классификация контента</option>
+                        <option value="llm_extract_metadata">Извлечение метаданных</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Системный промпт</label>
+                    <textarea id="promptSystem" rows="4" placeholder="Системный промпт для LLM"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Шаблон пользовательского промпта</label>
+                    <textarea id="promptUserTemplate" rows="6" placeholder="Шаблон с переменными: {url}, {content}, {title}"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Temperature</label>
+                        <input type="number" id="promptTemperature" step="0.1" min="0" max="2" value="0.2">
+                    </div>
+                    <div class="form-group">
+                        <label>Max Tokens</label>
+                        <input type="number" id="promptMaxTokens" value="-1" min="-1">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="promptIsActive" checked> Активен
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="button" class="btn btn-secondary" onclick="closePromptModal()">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для просмотра истории -->
+    <div id="historyModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeHistoryModal()">&times;</span>
+            <h2>Детали LLM вызова</h2>
+            <div id="historyDetails"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для создания датасета -->
+    <div id="datasetModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDatasetModal()">&times;</span>
+            <h2 id="datasetModalTitle">Создать датасет</h2>
+            <form id="datasetForm">
+                <input type="hidden" id="datasetId">
+                <div class="form-group">
+                    <label>Название *</label>
+                    <input type="text" id="datasetName" required>
+                </div>
+                <div class="form-group">
+                    <label>Описание</label>
+                    <textarea id="datasetDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Версия</label>
+                    <input type="text" id="datasetVersion" value="1.0">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeDatasetModal()">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast контейнер -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
