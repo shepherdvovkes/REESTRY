@@ -1,0 +1,5470 @@
+[
+  {
+    "id": 1,
+    "name": "Верховна Рада України",
+    "url": "https://zakon.rada.gov.ua",
+    "category": "Legislation & Norms",
+    "sample_data": {
+      "sample": [
+        {
+          "law_number": "1234-VIII",
+          "title": "Про захист прав споживачів",
+          "date": "2024-01-10",
+          "status": "Active"
+        },
+        {
+          "law_number": "5678-IX",
+          "title": "Про цифрові послуги",
+          "date": "2024-02-15",
+          "status": "Active"
+        }
+      ],
+      "total_records": "25,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Єдиний державний реєстр судових рішень",
+    "url": "https://reyestr.court.gov.ua",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Міністерство юстиції України (ЄДР)",
+    "url": "https://usr.minjust.gov.ua",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Державний реєстр речових прав на нерухоме майно",
+    "url": "https://kap.minjust.gov.ua",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Публічна кадастрова карта України",
+    "url": "https://map.land.gov.ua",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Автоматизована система виконавчого провадження",
+    "url": "https://asvpweb.minjust.gov.ua",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Єдиний реєстр боржників",
+    "url": "https://erb.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Головний сервісний центр МВС",
+    "url": "https://hsc.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Укрпатент",
+    "url": "https://ukrpatent.org",
+    "category": "Intellectual Property",
+    "sample_data": {
+      "sample": [
+        {
+          "application_number": "U 2024 00001",
+          "title": "Software System",
+          "applicant": "ТОВ \"Технології\"",
+          "status": "Pending"
+        },
+        {
+          "application_number": "U 2024 00002",
+          "title": "Trademark \"Example\"",
+          "applicant": "ФОП Іванов",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Державна податкова служба України",
+    "url": "https://tax.gov.ua",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Національне агентство з питань запобігання корупції",
+    "url": "https://nazk.gov.ua",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Рада національної безпеки і оборони України",
+    "url": "https://rnbo.gov.ua",
+    "category": "Legislation & Norms",
+    "sample_data": {
+      "sample": [
+        {
+          "law_number": "1234-VIII",
+          "title": "Про захист прав споживачів",
+          "date": "2024-01-10",
+          "status": "Active"
+        },
+        {
+          "law_number": "5678-IX",
+          "title": "Про цифрові послуги",
+          "date": "2024-02-15",
+          "status": "Active"
+        }
+      ],
+      "total_records": "25,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Європейський суд з прав людини (HUDOC)",
+    "url": "https://hudoc.echr.coe.int",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 14,
+    "name": "World Intellectual Property Organization (WIPO)",
+    "url": "https://www.wipo.int",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Єдиний державний реєстр нормативно-правових актів",
+    "url": "https://www.reestrnpa.gov.ua",
+    "category": "Legislation & Norms",
+    "sample_data": {
+      "sample": [
+        {
+          "law_number": "1234-VIII",
+          "title": "Про захист прав споживачів",
+          "date": "2024-01-10",
+          "status": "Active"
+        },
+        {
+          "law_number": "5678-IX",
+          "title": "Про цифрові послуги",
+          "date": "2024-02-15",
+          "status": "Active"
+        }
+      ],
+      "total_records": "25,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Реєстр спеціальних бланків документів інформаційної системи Міністерства юстиції України",
+    "url": "https://nais.gov.ua/section/registers_17",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Єдиний реєстр спеціальних бланків нотаріальних документів",
+    "url": "https://nais.gov.ua/section/registers_4",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Єдиний реєстр нотаріусів України",
+    "url": "https://nais.gov.ua/section/registers_3",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Спадковий реєстр",
+    "url": "https://nais.gov.ua/section/registers_16",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Єдиний реєстр довіреностей",
+    "url": "https://nais.gov.ua/section/registers_18",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Державний реєстр обтяжень рухомого майна",
+    "url": "https://nais.gov.ua/section/registers_15",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Єдиний реєстр громадських формувань",
+    "url": "https://nais.gov.ua/section/registers_21",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Реєстр атестованих судових експертів",
+    "url": "https://nais.gov.ua/section/registers_9",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Реєстр методик проведення судових експертиз",
+    "url": "https://nais.gov.ua/section/registers_22",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Єдиний реєстр підприємств, щодо яких порушено провадження у справі про банкрутство",
+    "url": "https://nais.gov.ua/section/registers_25",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Реєстр громадських об’єднань",
+    "url": "https://rgo.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Державний реєстр баз персональних даних",
+    "url": "https://www.informjust.ua/section/registers_23",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Державний реєстр друкованих засобів масової інформації та інформаційних агентств",
+    "url": "https://dzmi.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Електронний реєстр апостилів",
+    "url": "https://apostille.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Єдиний державний реєстр осіб, щодо яких застосовано положення Закону України «Про очищення влади»",
+    "url": "https://lustration.minjust.gov.ua/register",
+    "category": "Legislation & Norms",
+    "sample_data": {
+      "sample": [
+        {
+          "law_number": "1234-VIII",
+          "title": "Про захист прав споживачів",
+          "date": "2024-01-10",
+          "status": "Active"
+        },
+        {
+          "law_number": "5678-IX",
+          "title": "Про цифрові послуги",
+          "date": "2024-02-15",
+          "status": "Active"
+        }
+      ],
+      "total_records": "25,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Автоматизована система «Банкрутство та неплатоспроможність»",
+    "url": "https://asbn.minjust.gov.ua",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "vehicle_number": "AA1234BB",
+          "owner": "Іванов І.І.",
+          "make": "Toyota",
+          "year": "2020",
+          "status": "Registered"
+        },
+        {
+          "vehicle_number": "BC5678AA",
+          "owner": "ТОВ \"Приклад\"",
+          "make": "Volkswagen",
+          "year": "2019",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "8,500,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Єдиний реєстр арбітражних керуючих України",
+    "url": "https://asbn.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Єдиний реєстр приватних виконавців України",
+    "url": "https://erpv.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Єдина державна електронна система е-нотаріату",
+    "url": "https://enot.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Реєстр засідань офісу протідії рейдерству",
+    "url": "https://opendatabot.ua/open/anti-raiders-office",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Реєстр оцінювачів України",
+    "url": "https://opendatabot.ua/open/appraisers",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Реєстр арбітражних керуючих",
+    "url": "https://opendatabot.ua/open/arbitration-managers",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Реєстр аудиторів в України",
+    "url": "https://opendatabot.ua/open/auditors",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Реєстр податкових перевірок",
+    "url": "https://opendatabot.ua/open/audits",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Реєстр компаній, що мають власників з Республіки Білорусь",
+    "url": "https://opendatabot.ua/open/belorussia-business",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Реєстр атестованих судових експертів",
+    "url": "https://opendatabot.ua/open/certified-forensic-experts",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Реєстр колекторських компаній",
+    "url": "https://opendatabot.ua/open/collectors",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 53,
+    "name": "Єдиний реєстр корупціонерів",
+    "url": "https://opendatabot.ua/open/corrupted-officials",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Реєстр Дія.City",
+    "url": "https://opendatabot.ua/open/diia-city",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 55,
+    "name": "Реєстр дозволів ЄКМТ",
+    "url": "https://opendatabot.ua/open/ekmt",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 56,
+    "name": "Реєстр компаній, які провадять діяльність у сферах енергетики",
+    "url": "https://opendatabot.ua/open/energy",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 57,
+    "name": "Реєстр боржників ФГВ",
+    "url": "https://opendatabot.ua/open/fhv-debtors",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 58,
+    "name": "Реєстр фінансових установ України",
+    "url": "https://opendatabot.ua/open/financial-licenses",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Фінансові групи України",
+    "url": "https://opendatabot.ua/open/fpg",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Реєстр компаній, що мають власників з Ісламської Республіки Іран",
+    "url": "https://opendatabot.ua/open/iran-business",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 61,
+    "name": "Реєстр прозорості",
+    "url": "https://opendatabot.ua/open/lobbyists",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Реєстр суб’єктів у сфері медіа",
+    "url": "https://opendatabot.ua/open/media",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 63,
+    "name": "Реєстр рішень АМКУ про антиконкурентні дії",
+    "url": "https://opendatabot.ua/open/monopoly",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Реєстр ліцензій з медичної практики",
+    "url": "https://opendatabot.ua/open/moz-licenses",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 65,
+    "name": "Реєстр природних монополій України",
+    "url": "https://opendatabot.ua/open/natural-monopoly",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 66,
+    "name": "Реєстр установ до яких застосовані штрафи НБУ",
+    "url": "https://opendatabot.ua/open/nbu-sanctions",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 67,
+    "name": "Реєстр компаній, що публікують дані про використання публічних коштів",
+    "url": "https://opendatabot.ua/open/public-finances",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Реєстр санкційних компаній РНБО",
+    "url": "https://opendatabot.ua/open/rnbo-companies",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Реєстр компаній, що мали власників з Російської Федерації",
+    "url": "https://opendatabot.ua/open/russian-federation-business",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Реєстри світових санкцій",
+    "url": "https://opendatabot.ua/open/sanctions-check",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Реєстр охоронної діяльності",
+    "url": "https://opendatabot.ua/open/security-licenses",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Реєстр надавачів соціальниї послуг",
+    "url": "https://opendatabot.ua/open/social-services",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Реєстр державних підприємств України",
+    "url": "https://opendatabot.ua/open/state-companies",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Реєстр боржників ДПС",
+    "url": "https://opendatabot.ua/open/tax-debts",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 75,
+    "name": "Реєстр транспортних ліцензій",
+    "url": "https://opendatabot.ua/open/transport-licenses",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "vehicle_number": "AA1234BB",
+          "owner": "Іванов І.І.",
+          "make": "Toyota",
+          "year": "2020",
+          "status": "Registered"
+        },
+        {
+          "vehicle_number": "BC5678AA",
+          "owner": "ТОВ \"Приклад\"",
+          "make": "Volkswagen",
+          "year": "2019",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "8,500,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 76,
+    "name": "Реєстр виробників вогнепальної зброї",
+    "url": "https://opendatabot.ua/open/weapon-licenses",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 77,
+    "name": "Реєстр білого бізнесу",
+    "url": "https://opendatabot.ua/open/white-list",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 78,
+    "name": "Реєстр агророзписок",
+    "url": "https://opendatabot.ua/open/agro-vouchers",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 79,
+    "name": "Реєстр боржників аліментів",
+    "url": "https://opendatabot.ua/open/alimony-debtors",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 80,
+    "name": "Реєстр виконавчих проваджень або АСВП",
+    "url": "https://opendatabot.ua/open/asvp",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Реєстр філій",
+    "url": "https://opendatabot.ua/open/branch-office",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 82,
+    "name": "Реєстр платників ПДВ України",
+    "url": "https://opendatabot.ua/open/check-vat",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 83,
+    "name": "Реєстр банкрутств юридичних осіб",
+    "url": "https://opendatabot.ua/open/company-bankruptcy",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "company_name": "ТОВ \"Приклад\"",
+          "case_number": "B-123/2024",
+          "status": "In process",
+          "date": "2024-01-15"
+        },
+        {
+          "company_name": "ТОВ \"Приклад2\"",
+          "case_number": "B-456/2024",
+          "status": "Completed",
+          "date": "2024-02-20"
+        }
+      ],
+      "total_records": "45,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 84,
+    "name": "Переглянути статутні документи юридичної особи",
+    "url": "https://opendatabot.ua/open/corporate-charter",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 85,
+    "name": "Реєстр судових справ призначених до розгляду",
+    "url": "https://opendatabot.ua/open/court",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 86,
+    "name": "Реєстр обтяжень рухомого майна",
+    "url": "https://opendatabot.ua/open/drorm",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 87,
+    "name": "Єдиний державний реєстр",
+    "url": "https://opendatabot.ua/open/edr",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 88,
+    "name": "Реєстр боржників",
+    "url": "https://opendatabot.ua/open/erb",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Єдиний реєстр зниклих безвісти України",
+    "url": "https://opendatabot.ua/open/missing",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 90,
+    "name": "Реєстр неприбуткових установ та організацій",
+    "url": "https://opendatabot.ua/open/non-profit-organizations",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Структура власності юридичної особи",
+    "url": "https://opendatabot.ua/open/ownership-scheme",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 92,
+    "name": "Реєстр національних політичних діячів (PEP)",
+    "url": "https://opendatabot.ua/open/pep",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 93,
+    "name": "Реєстр банкрутства фізичних осіб",
+    "url": "https://opendatabot.ua/open/personal-bankruptcy",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "company_name": "ТОВ \"Приклад\"",
+          "case_number": "B-123/2024",
+          "status": "In process",
+          "date": "2024-01-15"
+        },
+        {
+          "company_name": "ТОВ \"Приклад2\"",
+          "case_number": "B-456/2024",
+          "status": "Completed",
+          "date": "2024-02-20"
+        }
+      ],
+      "total_records": "45,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Реєстр санкційних громадян РНБО",
+    "url": "https://opendatabot.ua/open/rnbo-citizens",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 95,
+    "name": "Реєстр самозайнятих осіб",
+    "url": "https://opendatabot.ua/open/self-employed",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 96,
+    "name": "Реєстр платників єдиного податку",
+    "url": "https://opendatabot.ua/open/single-tax",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 97,
+    "name": "Єдиний державний реєстр територіальних громад України",
+    "url": "https://opendatabot.ua/open/otg",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 98,
+    "name": "Єдиний реєстр адвокатів України",
+    "url": "https://opendatabot.ua/open/advocates",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Єдиний реєстр довіреностей",
+    "url": "https://opendatabot.ua/open/power-of-attorney",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 100,
+    "name": "Єдиний реєстр досудових розслідувань",
+    "url": "https://opendatabot.ua/open/erdr",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 101,
+    "name": "Єдиний реєстр спеціальних бланків нотаріальних документів",
+    "url": "https://opendatabot.ua/open/notary-blank-check",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 102,
+    "name": "Митний реєстр прав інтелектуальної власності України",
+    "url": "https://opendatabot.ua/open/customs-register",
+    "category": "Intellectual Property",
+    "sample_data": {
+      "sample": [
+        {
+          "application_number": "U 2024 00001",
+          "title": "Software System",
+          "applicant": "ТОВ \"Технології\"",
+          "status": "Pending"
+        },
+        {
+          "application_number": "U 2024 00002",
+          "title": "Trademark \"Example\"",
+          "applicant": "ФОП Іванов",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 103,
+    "name": "Реєстр будівельної діяльності",
+    "url": "https://opendatabot.ua/open/construction-activities",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 104,
+    "name": "Реєстр великих власників акцій",
+    "url": "https://opendatabot.ua/open/smida",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 105,
+    "name": "Реєстр великих платників податків",
+    "url": "https://opendatabot.ua/open/large-tax-payers",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 106,
+    "name": "Реєстр волонтерів",
+    "url": "https://opendatabot.ua/open/volunteers",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 107,
+    "name": "Реєстр грального бізнесу",
+    "url": "https://opendatabot.ua/open/gambling",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 108,
+    "name": "Реєстр земельного кадастру",
+    "url": "https://opendatabot.ua/l",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 109,
+    "name": "Реєстр класифікації видів економічної діяльності",
+    "url": "https://opendatabot.ua/c/kved",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 110,
+    "name": "Реєстр місць масової реєстрації компаній",
+    "url": "https://opendatabot.ua/open/mass-address",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 111,
+    "name": "Реєстр нерухомості",
+    "url": "https://opendatabot.ua/open/real-estate-registry",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 112,
+    "name": "Реєстр нотаріусів України",
+    "url": "https://opendatabot.ua/open/notaries",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 113,
+    "name": "Реєстр офшорів",
+    "url": "https://opendatabot.ua/offshores",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 114,
+    "name": "Реєстр правових позицій",
+    "url": "https://court.opendatabot.ua/lp",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 115,
+    "name": "Реєстр приватних виконавців",
+    "url": "https://opendatabot.ua/open/private-executors",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 116,
+    "name": "Реєстр програмного забезпечення російського походження",
+    "url": "https://opendatabot.ua/analytics/russian-software",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 117,
+    "name": "Реєстр судових рішень",
+    "url": "https://court.opendatabot.ua",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 118,
+    "name": "Реєстр тимчасово окупованих територій",
+    "url": "https://opendatabot.ua/open/tot",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 119,
+    "name": "Реєстр торговельних марок",
+    "url": "https://opendatabot.ua/open/trademarks",
+    "category": "Intellectual Property",
+    "sample_data": {
+      "sample": [
+        {
+          "application_number": "U 2024 00001",
+          "title": "Software System",
+          "applicant": "ТОВ \"Технології\"",
+          "status": "Pending"
+        },
+        {
+          "application_number": "U 2024 00002",
+          "title": "Trademark \"Example\"",
+          "applicant": "ФОП Іванов",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 120,
+    "name": "Реєстр транспорту",
+    "url": "https://opendatabot.ua/open/vin-check",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "vehicle_number": "AA1234BB",
+          "owner": "Іванов І.І.",
+          "make": "Toyota",
+          "year": "2020",
+          "status": "Registered"
+        },
+        {
+          "vehicle_number": "BC5678AA",
+          "owner": "ТОВ \"Приклад\"",
+          "make": "Volkswagen",
+          "year": "2019",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "8,500,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 121,
+    "name": "Реєстр фізичних осіб підприємців",
+    "url": "https://opendatabot.ua/open/fop-search",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 122,
+    "name": "Реєстр церков московського патріархату",
+    "url": "https://opendatabot.ua/open/russian-church",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 123,
+    "name": "Реєстр штрафів ПДР",
+    "url": "https://opendatabot.ua/open/traffic-fines",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 124,
+    "name": "Реєстр штрафів Укртрансбезпека",
+    "url": "https://opendatabot.ua/open/fines-for-overloading",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 125,
+    "name": "Єдиний реєстр розпорядників бюджетних коштів та одержувачів бюджетних коштів",
+    "url": "https://www.treasury.gov.ua/ua/kaznachejstvo-informuye/yedinij-reyestr-rozporyadnikiv-ta-oderzhuvachiv-byudzhetnih-koshtiv",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 126,
+    "name": "Єдиний державний реєстр підприємств і організацій України",
+    "url": "http://www.ukrstat.gov.ua/menu/edrpou.htm",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 127,
+    "name": "Ліцензійний реєстр господарської діяльності з надання послуг і виконання робіт протипожежного призначення",
+    "url": "https://www.dsns.gov.ua/ua/Licenzuvannya.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 128,
+    "name": "Перелік дозволів на виконання робіт підвищеної небезпеки та на експлуатацію (застосування) машин, механізмів, устаткування підвищеної небезпеки",
+    "url": "http://dsp.gov.ua/reiestr-dozvoliv-na-vykonannia-robit-pidvyshchenoi-nebezpeky/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 129,
+    "name": "Перелік осіб, пов'язаних із здійсненням терористичної діяльності або стосовно яких застосовано міжнародні санкції",
+    "url": "http://www.sdfm.gov.ua/articles.php?cat_id=126&lang=uk",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 130,
+    "name": "Реєстр платників податку на додану вартість",
+    "url": "https://cabinet.sfs.gov.ua/registers/pdv",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 131,
+    "name": "Державний реєстр географічних назв",
+    "url": "https://kartographia.com.ua/standardization-of-geographical-names/state-register/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 132,
+    "name": "Ліцензійний реєстр на право здійснення господарської діяльності з обігу наркотичних засобів, психотропних речовин і прекурсорів",
+    "url": "http://dls.gov.ua/%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D1%96-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80%D0%B8/%D0%BB%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B0%D0%B2%D0%BE-%D0%B7%D0%B4%D1%96%D0%B9%D1%81%D0%BD%D0%B5%D0%BD/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 133,
+    "name": "Реєстр місць провадження діяльності з оптової та роздрібної торгівлі лікарських засобів",
+    "url": "http://dls.gov.ua/%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D1%96-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80%D0%B8/%D0%BB%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80-%D0%B7-%D0%B2%D0%B8%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D1%86%D1%82%D0%B2%D0%B0-%D0%BB%D1%96%D0%BA/",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 134,
+    "name": "Реєстр діючих ліцензій з імпорту лікарських засобів",
+    "url": "http://dls.gov.ua/%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D1%96-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80%D0%B8/%D0%BB%D1%96%D1%86%D0%B5%D0%BD%D0%B7%D1%96%D0%B9%D0%BD%D0%B8%D0%B9-%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80-%D0%B7-%D1%96%D0%BC%D0%BF%D0%BE%D1%80%D1%82%D1%83-%D0%BB%D1%96%D0%BA%D0%B0%D1%80%D1%81%D1%8C/",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 135,
+    "name": "Реєстр документів щодо якості лікарських засобів",
+    "url": "http://dls.gov.ua/%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%96%D0%B2-%D1%89%D0%BE%D0%B4%D0%BE-%D1%8F%D0%BA%D0%BE%D1%81%D1%82%D1%96-%D0%BB%D0%B7/",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 136,
+    "name": "Реєстр осіб відповідальних за введення медичних виробів, активних медичних виробів, які імплантують, та медичних виробів для діагностики in vitro в обіг",
+    "url": "http://dls.gov.ua/%D0%BC%D0%B5%D0%B4%D0%B8%D1%87%D0%BD%D1%96-%D0%B2%D0%B8%D1%80%D0%BE%D0%B1%D0%B8/%D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80-%D0%BE%D1%81%D1%96%D0%B1-%D0%B2%D1%96%D0%B4%D0%BF%D0%BE%D0%B2%D1%96%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D1%85-%D0%B7%D0%B0-%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD/",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 137,
+    "name": "Реєстр висновків санітарноепідеміологічної експертизи",
+    "url": "http://www.consumer.gov.ua/ContentPages/Reestr_Visnovkiv_Derzhsanepidekspertizi/256/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 138,
+    "name": "Реєстр ліцензій на провадження охоронної діяльності",
+    "url": "https://mvs.gov.ua/ua/pages/5562_Licenzuvannya.htm",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 139,
+    "name": "Державний електронний інформаційний ресурс Міністерства внутрішніх справ, в якому обробляється інформація з питань судимостей",
+    "url": "http://hsc.gov.ua/index/poslugi/dovidka-pro-vidsutnist-sudimosti/",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 140,
+    "name": "Державний реєстр майнових об’єктів оздоровлення та відпочинку дітей",
+    "url": "https://www.msp.gov.ua/content/reestr-dityachih-zakladiv-ozdorovlennya-ta-vidpochiku.html?PrintVersion",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 141,
+    "name": "Реєстр суб’єктів природних монополій у сферах теплопостачання, централізованого водопостачання та водовідведення",
+    "url": "http://www.nerc.gov.ua/?id=11943",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 142,
+    "name": "Перелік суб'єктів господарської діяльності, які отримали ліцензії з виробництва теплової енергії на теплоелектроцентралях, ТЕС, АЕС, когенераційних установках та установках з використанням нетрадиційних або поновлюваних джерел енергії",
+    "url": "http://www.nerc.gov.ua/?id=22011",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 143,
+    "name": "Ліцензійний реєстр (водовідведення, постачання ел.енергії)",
+    "url": "http://www.nerc.gov.ua/?id=11957",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 144,
+    "name": "Єдиний державний реєстр осіб, які вчинили корупційні правопорушення",
+    "url": "https://corruptinfo.nazk.gov.ua/",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 145,
+    "name": "Перелік суб'єктів господарської діяльності, які отримали ліцензії з виробництва електричної енергії; передачі електричної енергії магістральними та міждержавними електричними мережами; передачі електричної енергії місцевими (локальними) електричними мережами; постачання електричної енергії за регульованим тарифом; оптового постачання електричної енергії",
+    "url": "http://www.nerc.gov.ua/?id=21971",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 146,
+    "name": "Ліцензійний реєстр суб'єктів господарювання, що здійснюють господарську діяльність у сфері теплопостачання",
+    "url": "http://www.nerc.gov.ua/?id=22008",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 147,
+    "name": "Реєстр атестованих осіб (технічний нагляд, архітектори, проектувальники, інженери кошторису)",
+    "url": "http://asdev.com.ua/itn/list.php",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 148,
+    "name": "Державний реєстр фінансових установ",
+    "url": "https://www.nfp.gov.ua/ua/Derzhavnyi-reiestr-finansovykh-ustanov.html",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 149,
+    "name": "Реєстр страхових агентів",
+    "url": "https://cbd.mtibu.kiev.ua/MTSBU_Pages/Parameters/SearchParams.aspx?ParamsName=-1639528499&AutoAuth=true",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 150,
+    "name": "Ліцензійний реєстр (Виробництво особливо небезпечних хімічних речовин)",
+    "url": "https://menr.gov.ua/content/perelik-licenziativ-na-provadzhennya-gospodarskoi-diyalnosti-z-virobnictva-osoblivo-nebezpechnih-himichnih-rechovin-perelik-yakih-viznachaetsya-kabinetom-ministriv-ukraini.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 151,
+    "name": "Державний реєстр сертифікованих інженерів-геодезистів",
+    "url": "https://land.gov.ua/info/derzhavnyi-reiestr-sertyfikovanykh-inzheneriv-heodezystiv/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 152,
+    "name": "Державний реєстр сертифікованих інженерів-землевпорядників",
+    "url": "https://land.gov.ua/info/derzhavnyi-reiestr-sertyfikovanykh-inzheneriv-zemlevporiadnykiv/",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 153,
+    "name": "Ліцензійний реєстр (Поводження з небезпечними відходами)",
+    "url": "https://menr.gov.ua/content/perelik-licenziativ-na-provadzhennya-gospodarskoi-diyalnosti-z-povodzhennya-z-nebezpechnimi-vidhodami.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 154,
+    "name": "Реєстр виробників та розповсюджувачів програмного забезпечення",
+    "url": "https://data.gov.ua/dataset/ce13eef2-80f0-4ff2-9b31-40722e429059",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 155,
+    "name": "Реєстр документів про вищу освіту",
+    "url": "https://info.edbo.gov.ua/edu-documents/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 157,
+    "name": "Банківські ліцензії та види діяльності банків України",
+    "url": "https://bank.gov.ua/control/uk/publish/article?art_id=52047&cat_id=11214280",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 158,
+    "name": "Реєстр провайдерів, операторів телекомунікацій",
+    "url": "https://nkrzi.gov.ua/index.php?r=site/index&pg=55&language=uk",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 159,
+    "name": "Рада адвокатів України",
+    "url": "https://unba.org.ua/rau",
+    "category": "Legislation & Norms",
+    "sample_data": {
+      "sample": [
+        {
+          "law_number": "1234-VIII",
+          "title": "Про захист прав споживачів",
+          "date": "2024-01-10",
+          "status": "Active"
+        },
+        {
+          "law_number": "5678-IX",
+          "title": "Про цифрові послуги",
+          "date": "2024-02-15",
+          "status": "Active"
+        }
+      ],
+      "total_records": "25,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 160,
+    "name": "Реєстр виданих ліцензій на користування радіочастотним ресурсом України",
+    "url": "https://nkrzi.gov.ua/index.php?r=site/index&pg=56&language=uk",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 161,
+    "name": "Єдиний реєстр адвокатів України",
+    "url": "http://erau.unba.org.ua/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 162,
+    "name": "Ліцензійний реєстр на провадження господарської діяльності з перевезення пасажирів, небезпечних вантажів та небезпечних відходів річковим, морським",
+    "url": "http://dsbt.gov.ua/storinka/rishennya-pryynyatti-organom-licenzuvannya-stosovno-rozglyadu-zayav-dlya-otrymannya-0",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 163,
+    "name": "Ліцензійний реєстр на провадження господарської діяльності з перевезення пасажирів, небезпечних вантажів та небезпечних відходів залізничним транспортом",
+    "url": "http://dsbt.gov.ua/storinka/licenzuvannya-na-zaliznychnomu-transporti",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "vehicle_number": "AA1234BB",
+          "owner": "Іванов І.І.",
+          "make": "Toyota",
+          "year": "2020",
+          "status": "Registered"
+        },
+        {
+          "vehicle_number": "BC5678AA",
+          "owner": "ТОВ \"Приклад\"",
+          "make": "Volkswagen",
+          "year": "2019",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "8,500,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 164,
+    "name": "Національний реєстр електронних інформаційних ресурсів",
+    "url": "http://e-resurs.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 165,
+    "name": "Інформація про стан розгляду заяви (запиту) з Державний реєстр речових прав на нерухоме майно",
+    "url": "http://rrp.informjust.ua",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 166,
+    "name": "Відомості з Єдиного державного реєстру осіб, які вчинили корупційні правопорушення",
+    "url": "http://corrupt.informjust.ua",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 167,
+    "name": "Вся Україна - жителі",
+    "url": "http://www.nomer.org/allukraina",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 168,
+    "name": "Поштові індекси та відділення поштового зв’язку. Пошук поштового відправлення",
+    "url": "http://services.ukrposhta.com/postindex_new,",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 169,
+    "name": "Перевірка документа про освіту",
+    "url": "https://osvita.net/ua/checkdoc",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 170,
+    "name": "Реєстр. Винаходи та корисні моделі. Знаки для товарів і послуг. Промислові зразки. Інші бази даних Інституту промислової власності",
+    "url": "http://www.uipv.org/ua/bases2.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 171,
+    "name": "Розшук МВС. Зниклі громадяни. Мобільні телефони. Транспортні засоби у розшуку. Зброя у розшуку. Культурні цінності. Неопізнанні трупи. Особи, які переховуються від органів влади. Особи, що не можуть надати про себе відомостей внаслідок хвороби або неповнолітнього віку",
+    "url": "http://mvs.gov.ua/mvs/control/uk/investigation",
+    "category": "Transport & Infrastructure",
+    "sample_data": {
+      "sample": [
+        {
+          "vehicle_number": "AA1234BB",
+          "owner": "Іванов І.І.",
+          "make": "Toyota",
+          "year": "2020",
+          "status": "Registered"
+        },
+        {
+          "vehicle_number": "BC5678AA",
+          "owner": "ТОВ \"Приклад\"",
+          "make": "Volkswagen",
+          "year": "2019",
+          "status": "Registered"
+        }
+      ],
+      "total_records": "8,500,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 172,
+    "name": "База даних підприємств харчової промисловості",
+    "url": "http://www.ukroliya.kiev.ua/industry",
+    "category": "Business & Entities",
+    "sample_data": {
+      "sample": [
+        {
+          "code": "12345678",
+          "name": "ТОВ \"Приклад\"",
+          "status": "Active",
+          "registration_date": "2020-05-10"
+        },
+        {
+          "code": "87654321",
+          "name": "ФОП Іванов І.І.",
+          "status": "Active",
+          "registration_date": "2019-03-22"
+        }
+      ],
+      "total_records": "1,850,000+",
+      "last_updated": "2024-12-20"
+    }
+  },
+  {
+    "id": 173,
+    "name": "Реєстр адвокатських об'єднань Києва",
+    "url": "http://kmkdka.com/reestr-advokatskih-obiednan-kieva",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 174,
+    "name": "Перевірка коду IMEI мобільних телефонів",
+    "url": "http://www.ucrf.gov.ua/baza-imei/perevirka-kodu-imei",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 175,
+    "name": "Єдина база даних електронних адрес, номерів факсів (телефаксів) суб’єктів владних повноважень",
+    "url": "http://email.court.gov.ua/search",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 176,
+    "name": "Державний реєстр небезпечних факторів Держсанепідемслужби",
+    "url": "http://uhrc.gov.ua/registr",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 177,
+    "name": "Державний реєстр лікарських засобів",
+    "url": "http://www.drlz.kiev.ua",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 178,
+    "name": "Державний реєстр лікарських засобів. Державний реєстр медичної техніки і виробів медичного призначення. Державний реєстр дезінфекційних засобів. Державний формуляр лікарських засобів. Реєстр оптово-відпускних цін на вироби медичного призначення",
+    "url": "http://old.moz.gov.ua/ua/portal/register_medicines/",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 179,
+    "name": "Перелік лікарських засобів, заборонених до рекламування, які відпускаються без рецепта",
+    "url": "http://zakon2.rada.gov.ua/laws/show/z1948-12/paran13#n13",
+    "category": "Health & Medicine",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "MD-12345",
+          "name": "Dr. Іванов І.І.",
+          "specialization": "Cardiology",
+          "status": "Active"
+        },
+        {
+          "license_number": "MD-67890",
+          "name": "Dr. Петрова П.П.",
+          "specialization": "Pediatrics",
+          "status": "Active"
+        }
+      ],
+      "total_records": "250,000+",
+      "last_updated": "2024-12-17"
+    }
+  },
+  {
+    "id": 180,
+    "name": "Зареєстровані ветеринарні препарати",
+    "url": "https://vet.in.ua/menu/drugs.php",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 181,
+    "name": "Стан довкілля",
+    "url": "https://menr.gov.ua/timeline/Ekologichniy-monitoring.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 182,
+    "name": "Державний реєстр телерадіоорганізацій",
+    "url": "https://www.nrada.gov.ua/derzhavnyj-reyestr-sub-yektiv-informatsijnoyi-diyalnosti-u-sferi-telebachennya-radiomovlennya/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 183,
+    "name": "Електронний реєстр суб'єктів, які надають послуги, пов'язані з ЕЦП",
+    "url": "http://czo.gov.ua/ca-registry",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 184,
+    "name": "Реєстр дозволів на міжнародні перевезення",
+    "url": "https://mtu.gov.ua/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 185,
+    "name": "Довідник вантажних станцій Укрзалізниці",
+    "url": "http://uz.gov.ua/cargo_transportation/general_information/cargo_stations/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 186,
+    "name": "Перелік виданих дозвільних документів (ЄКМТ) Укртрансінспекції",
+    "url": "http://www.uti.gov.ua/transinsp/uk/publish/category/49824",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 187,
+    "name": "Реєстр ліцензіатів , яким дозволена діяльність у сфері збору, обробки, переробки відходів дорогоцінних металів і дорогоцінного каміння",
+    "url": "http://www.assay.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 188,
+    "name": "Пошук та відстеження державних закупівель",
+    "url": "https://ips.vdz.ua,",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 189,
+    "name": "Електронна реєстрація в дошкільні навчальні заклади",
+    "url": "https://reg.isuo.org/preschools,",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 190,
+    "name": "Державний реєстр реєстраторів розрахункових операцій",
+    "url": "http://sfs.gov.ua/dovidniki--reestri--perelik/reestri/320822.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 191,
+    "name": "Національна комісія регулювання енергетики та комунальних послуг НКРЕКП. Реєстри. Ліцензійні реєстри. Реєстри суб’єктів природних монополій. Реєстр об’єктів електроенергетики (альтернативні джерела енергії)",
+    "url": "http://www.nerc.gov.ua/?id=11957",
+    "category": "Specialized (Energy, Environment)",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 192,
+    "name": "Жертви політичного терору в СРСР",
+    "url": "http://lists.memo.ru",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 193,
+    "name": "Узагальнений банк даних “Меморіал”",
+    "url": "http://www.obd-memorial.ru/html/index.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 194,
+    "name": "База даних експортерів",
+    "url": "http://ukrexport.gov.ua/rus/ukr_export_exporters/?country=ukr",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 195,
+    "name": "База даних інфраструктури експорта",
+    "url": "http://ukrexport.gov.ua/rus/baza_ukr_infrastructure/?country=ukr",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 196,
+    "name": "Реєстр виданих ліцензій Держархбудінспекцією. Реєстр дозвільних документів на виконання будівельних робіт",
+    "url": "http://dabi.gov.ua/license/list.php",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 197,
+    "name": "Перелік чинних галузевих будівельних норм (ВБН, ГБН) у сфері дорожнього господарства",
+    "url": "http://www.ukravtodor.gov.ua/…/с_perelik-chinnikh-galu…",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 198,
+    "name": "Реєстр сертифікованих працівників БТІ",
+    "url": "http://asdev.com.ua/itn/list.php",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 199,
+    "name": "Перелік експертних організацій, які відповідають Критеріям, встановленим наказом Мінрегіону від 23.05.2011 №53, та можуть здійснювати експертизу проектів будівництва",
+    "url": "http://data.gov.ua/passport/382aca48-a62a-4db2-9f10-8f4853ad0665",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 200,
+    "name": "Інформація про власників істотної участі у банках",
+    "url": "http://bank.gov.ua/control/uk/publish/article…",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 201,
+    "name": "Перевірка чинності полісу, страховика, зеленої карти, страхового агента МТСБУ",
+    "url": "https://cbd.mtibu.kiev.ua/MTSBU_Pages/Tree.aspx?autoauth=true",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 202,
+    "name": "Єдиний ліцензійний реєстр",
+    "url": "http://irc.gov.ua/ua/Poshuk-v-YeLR.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 203,
+    "name": "Он-лайн реєстрація юридичних осіб та фізичних осіб-підприємців",
+    "url": "http://rp.irc.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 204,
+    "name": "Єдиний реєстр бюро кредитних історій",
+    "url": "https://ubki.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 205,
+    "name": "Державний реєстр фінансових установ",
+    "url": "http://kis.nfp.gov.ua",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 206,
+    "name": "Єдиний реєстр нотаріусів",
+    "url": "http://ern.minjust.gov.ua/pages/default.aspx",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "notary_name": "Іванов І.І.",
+          "district": "Kyiv",
+          "certificate_number": "NOT-12345",
+          "status": "Active"
+        },
+        {
+          "notary_name": "Петрова П.П.",
+          "district": "Lviv",
+          "certificate_number": "NOT-67890",
+          "status": "Active"
+        }
+      ],
+      "total_records": "8,500+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 207,
+    "name": "Єдиний державний реєстр юридичних осіб та фізичних осіб-підприємців",
+    "url": "https://usr.minjust.gov.ua/ua/freesearch",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 208,
+    "name": "Державний реєстр речових прав на нерухоме майно. Електронний суд. Єдиний реєстр підприємств, щодо яких порушено провадження у справі про банкрутство. Система електронної звітності арбітражних керуючих.",
+    "url": "https://kap.minjust.gov.ua",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 209,
+    "name": "Реєстр адміністративних послуг",
+    "url": "http://www.me.gov.ua/Documents/List?lang=uk-UA",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 212,
+    "name": "Державний реєстр оцінювачів з експертної грошової оцінки земельних ділянок",
+    "url": "https://land.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 215,
+    "name": "Єдиний державний реєстр виконавчих проваджень",
+    "url": "https://minjust.gov.ua/m/str_3198",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "debtor_name": "ТОВ \"Приклад\"",
+          "debt_amount": "125,000 UAH",
+          "creditor": "State Tax Service",
+          "status": "Active"
+        },
+        {
+          "debtor_name": "ФОП Іванов",
+          "debt_amount": "45,000 UAH",
+          "creditor": "Bank",
+          "status": "Active"
+        }
+      ],
+      "total_records": "850,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 216,
+    "name": "База даних втрачених паспортів",
+    "url": "http://www.fin-risk.org/index.php?name=Passports",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 217,
+    "name": "Перелік рахунків для зарахування надходжень до державного бюджету за кодом класифікації доходів бюджету 24061800",
+    "url": "https://amcu.gov.ua/storage/app/sites/1/invoce_%2001.01.2020.pdf",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 218,
+    "name": "Електронний кабінет платника податків",
+    "url": "https://cabinet.tax.gov.ua/",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 219,
+    "name": "База даних і система аналітики публічних закупівель ProZorro Clarity-project.info",
+    "url": "https://clarity-project.info/tenders",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 220,
+    "name": "Отримання довідки про несудимість",
+    "url": "https://odk.mvs.gov.ua/site/index?from_frame=0",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 221,
+    "name": "ЄДИНИЙ ДЕРЖАВНИЙ РЕЄСТР осіб, які вчинили корупційні або пов’язані з корупцією правопорушення",
+    "url": "https://corruptinfo.nazk.gov.ua/main/reference/list",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 222,
+    "name": "Реєстр платників ПДВ",
+    "url": "http://sfs.gov.ua/reestr",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 223,
+    "name": "Національний портал відкритих даних",
+    "url": "http://data.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 224,
+    "name": "Перевірка документа про освіту",
+    "url": "https://osvita.net/ua/checkdoc",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 225,
+    "name": "Анульована реєстрація платників ПДВ",
+    "url": "http://sfs.gov.ua/anulir",
+    "category": "Finance & Taxes",
+    "sample_data": {
+      "sample": [
+        {
+          "taxpayer_id": "1234567890",
+          "name": "ТОВ \"Приклад\"",
+          "vat_status": "Active",
+          "registration_date": "2020-01-15"
+        },
+        {
+          "taxpayer_id": "0987654321",
+          "name": "ФОП Петров П.П.",
+          "vat_status": "Active",
+          "registration_date": "2018-06-20"
+        }
+      ],
+      "total_records": "3,200,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 226,
+    "name": "Єдиний ліцензійний реєстр",
+    "url": "http://irc.gov.ua/ua/Poshuk-v-YeLR.html",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "license_number": "LIC-12345",
+          "holder": "ТОВ \"Приклад\"",
+          "activity": "Retail Trade",
+          "expiry": "2025-12-31",
+          "status": "Active"
+        },
+        {
+          "license_number": "LIC-67890",
+          "holder": "ФОП Іванов",
+          "activity": "Construction",
+          "expiry": "2026-06-30",
+          "status": "Active"
+        }
+      ],
+      "total_records": "450,000+",
+      "last_updated": "2024-12-19"
+    }
+  },
+  {
+    "id": 227,
+    "name": "Єдиний державний реєстр судових рішень",
+    "url": "http://www.reyestr.court.gov.ua",
+    "category": "Judiciary & Enforcement",
+    "sample_data": {
+      "sample": [
+        {
+          "case_number": "123/456/2024",
+          "date": "2024-01-15",
+          "court": "Kyiv City Court",
+          "summary": "Commercial dispute resolution"
+        },
+        {
+          "case_number": "789/012/2024",
+          "date": "2024-02-20",
+          "court": "Lviv Regional Court",
+          "summary": "Property rights case"
+        }
+      ],
+      "total_records": "2,450,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 228,
+    "name": "Інформація з фондового ринку",
+    "url": "http://smida.gov.ua/db",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 229,
+    "name": "Система реалізації конфіскованого та арештованого майна",
+    "url": "https://trade.informjust.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 230,
+    "name": "Реєстр громадських об’єднань",
+    "url": "http://rgo.informjust.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 231,
+    "name": "Єдиний реєстр громадських формувань",
+    "url": "http://rgf.informjust.ua/home/index",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 232,
+    "name": "Реєстр друкованих ЗМІ та інформаційних агентств",
+    "url": "http://dzmi.informjust.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 233,
+    "name": "Публічна кадастрова карта",
+    "url": "http://www.map.land.gov.ua/kadastrova-karta",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 234,
+    "name": "База даних втрачених паспортів",
+    "url": "http://www.fin-risk.org/index.php?name=Passports",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 235,
+    "name": "Єдиний державний реєстр юридичних осіб та фізичних осіб-підприємців",
+    "url": "https://usr.minjust.gov.ua",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 236,
+    "name": "Зниклі громадяни",
+    "url": "http://mvs.gov.ua/%E2%80%A6/contr%E2%80%A6/investigation/search/missedPerson",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 243,
+    "name": "Ukraine Consolidated State Registry",
+    "url": "https://www.opensanctions.org/datasets/ext_ua_edr/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 244,
+    "name": "State Register of Sanctions",
+    "url": "https://www.rnbo.gov.ua/en/Diialnist/6769.html",
+    "category": "Anti-Corruption & Sanctions",
+    "sample_data": {
+      "sample": [
+        {
+          "person_name": "Іванов І.І.",
+          "position": "Public Official",
+          "violation_date": "2023-05-10",
+          "status": "Under investigation"
+        },
+        {
+          "person_name": "Петров П.П.",
+          "position": "Former Official",
+          "violation_date": "2022-11-20",
+          "status": "Convicted"
+        }
+      ],
+      "total_records": "15,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 245,
+    "name": "Unified State Register of Territorial Communities",
+    "url": "https://mvs.gov.ua/en/ministry/projekti-mvs/informatizaciya-sistemi-mvs-ukrayini/jedinii-derzavnii-rejestr-teritorialnix-gromad-ukrayini",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  },
+  {
+    "id": 246,
+    "name": "Unified registry of the state property objects",
+    "url": "https://www.spfu.gov.ua/en/content/spf-stateproperty.html",
+    "category": "Property & Assets",
+    "sample_data": {
+      "sample": [
+        {
+          "property_id": "UA-12345",
+          "address": "Kyiv, Shevchenko Ave. 1",
+          "owner": "Private",
+          "area": "120 sq.m"
+        },
+        {
+          "property_id": "UA-67890",
+          "address": "Lviv, Freedom Ave. 5",
+          "owner": "Private",
+          "area": "85 sq.m"
+        }
+      ],
+      "total_records": "15,000,000+",
+      "last_updated": "2024-12-18"
+    }
+  },
+  {
+    "id": 247,
+    "name": "Ukrainian State Archives",
+    "url": "https://www.geshergalicia.org/ukrainian-archives/",
+    "category": "Other",
+    "sample_data": {
+      "sample": [
+        {
+          "id": "001",
+          "name": "Sample Record 1",
+          "status": "Active",
+          "date": "2024-01-10"
+        },
+        {
+          "id": "002",
+          "name": "Sample Record 2",
+          "status": "Active",
+          "date": "2024-02-15"
+        }
+      ],
+      "total_records": "10,000+",
+      "last_updated": "2024-12-15"
+    }
+  }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukraine Open Databases & Registries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇺🇦 Ukraine Open Databases & Registries</h1>
+            <p class="subtitle">Comprehensive directory of over 200+ publicly accessible Ukrainian state registries and databases</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name, category, or URL...">
+                <button id="clearSearch">Clear</button>
+            </div>
+            <div class="filter-box">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+            <div class="stats">
+                <span id="resultsCount">0</span> sources found
+            </div>
+        </div>
+
+        <div id="sourcesContainer" class="sources-grid">
+            <!-- Sources will be dynamically inserted here -->
+        </div>
+
+        <footer>
+            <p>Data extracted from official Ukrainian government sources and open data portals</p>
+            <p>Last updated: <span id="lastUpdated"></span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

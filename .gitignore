@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+venv*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and temporary files
+*.log
+*.tmp
+test_output.txt
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Playwright
+.playwright/
+
+# Node modules (if any)
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Training data (may contain sensitive info)
+training_data.txt
+
+# Problem file (may be large)
+# Uncomment if you don't want to include it:
+# problem.txt
+
