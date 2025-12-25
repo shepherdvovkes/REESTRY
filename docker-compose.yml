@@ -1,0 +1,135 @@
+version: '3.8'
+
+services:
+  # PostgreSQL база данных
+  postgres:
+    image: postgres:15-alpine
+    container_name: reestry-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-reestry}
+      POSTGRES_USER: ${POSTGRES_USER:-reestry_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-reestry_password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    networks:
+      - reestry-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-reestry_user}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis для кэширования
+  redis:
+    image: redis:7-alpine
+    container_name: reestry-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --appendonly yes
+    networks:
+      - reestry-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # Краулер
+  crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile.crawler
+    container_name: reestry-crawler
+    environment:
+      LMSTUDIO_URL: ${LMSTUDIO_URL:-http://192.168.0.60:1234/v1/chat/completions}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-reestry}
+      POSTGRES_USER: ${POSTGRES_USER:-reestry_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-reestry_password}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    volumes:
+      - ./UkrDeepCrawler:/app
+      - ./data/crawler:/app/data
+    networks:
+      - reestry-network
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # Обработчик документов
+  processor:
+    build:
+      context: .
+      dockerfile: Dockerfile.processor
+    container_name: reestry-processor
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB:-reestry}
+      POSTGRES_USER: ${POSTGRES_USER:-reestry_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-reestry_password}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    volumes:
+      - .:/app
+      - ./data/processor:/app/data
+    networks:
+      - reestry-network
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # Prometheus для мониторинга
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: reestry-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./terraform/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./data/prometheus:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    networks:
+      - reestry-network
+    restart: unless-stopped
+
+  # Grafana для визуализации
+  grafana:
+    image: grafana/grafana:latest
+    container_name: reestry-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:-admin}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+      - ./terraform/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./terraform/grafana/datasources:/etc/grafana/provisioning/datasources
+    networks:
+      - reestry-network
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+networks:
+  reestry-network:
+    driver: bridge
+

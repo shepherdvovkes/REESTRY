@@ -1,0 +1,36 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'reestry-monitor'
+
+scrape_configs:
+  # Мониторинг самого Prometheus
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Мониторинг краулера (если есть metrics endpoint)
+  - job_name: 'crawler'
+    static_configs:
+      - targets: ['reestry-crawler:8000']
+    scrape_interval: 30s
+
+  # Мониторинг обработчика (если есть metrics endpoint)
+  - job_name: 'processor'
+    static_configs:
+      - targets: ['reestry-processor:8001']
+    scrape_interval: 30s
+
+  # Мониторинг PostgreSQL (требует postgres_exporter)
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['reestry-postgres:9187']
+    scrape_interval: 30s
+
+  # Мониторинг Redis (требует redis_exporter)
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['reestry-redis:9121']
+    scrape_interval: 30s
+

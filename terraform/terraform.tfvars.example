@@ -1,0 +1,14 @@
+# Пример файла конфигурации переменных
+# Скопируйте этот файл в terraform.tfvars и измените значения
+
+# URL для LMStudio API сервера
+lmstudio_url = "http://192.168.0.60:1234/v1/chat/completions"
+
+# Настройки PostgreSQL
+postgres_user     = "reestry_user"
+postgres_database = "reestry"
+postgres_password = "change_me_secure_password"
+
+# Настройки Grafana
+grafana_admin_password = "change_me_grafana_password"
+

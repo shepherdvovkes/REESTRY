@@ -55,21 +55,161 @@ crawler.save_results("results.json")
 crawler = LLMCrawler(lmstudio_url="http://your-lmstudio-server:1234/v1/chat/completions")
 ```
 
+## Базы данных
+
+Для эффективной работы crawler рекомендуется использовать две базы данных:
+
+### 1. Кэширование запросов
+
+**Назначение:** Кэширование LLM-запросов и результатов анализа для избежания повторных запросов к одинаковому контенту.
+
+**Рекомендуемые варианты:**
+
+- **Redis** (рекомендуется для production)
+  - Быстрый in-memory кэш
+  - TTL для автоматического истечения старых записей
+  - Поддержка кластеризации
+  - Установка: `pip install redis`
+
+- **SQLite** (для локальной разработки)
+  - Не требует отдельного сервера
+  - Простая настройка
+  - Подходит для небольших проектов
+
+**Структура кэша:**
+
+- Ключ: хеш контента страницы
+- Значение: результат LLM-анализа (JSON)
+- TTL: 7-30 дней (в зависимости от частоты обновления источников)
+
+### 2. Хранение сырых данных
+
+**Назначение:** Хранение найденных данных из реестров в структурированном, но сыром виде (до обработки и нормализации).
+
+**Рекомендуемые варианты:**
+
+- **PostgreSQL** (рекомендуется для структурированных данных)
+  - Реляционная модель для связанных данных
+  - JSONB для гибкого хранения метаданных
+  - Full-text search для поиска по тексту
+  - Поддержка индексов и сложных запросов
+  - Установка: `pip install psycopg2-binary`
+
+- **MongoDB** (для документно-ориентированного хранения)
+  - Гибкая схема для различных типов реестров
+  - Нативная поддержка JSON
+  - Удобно для неструктурированных данных
+  - Установка: `pip install pymongo`
+
+- **SQLite** (для небольших проектов)
+  - Не требует отдельного сервера
+  - JSON1 расширение для работы с JSON
+  - Подходит для прототипирования
+
+**Структура таблиц/коллекций:**
+
+```sql
+-- PostgreSQL пример
+CREATE TABLE raw_data_sources (
+    id SERIAL PRIMARY KEY,
+    url TEXT UNIQUE NOT NULL,
+    source_type VARCHAR(50),  -- registry, api, data_file
+    domain VARCHAR(255),
+    discovered_at TIMESTAMP DEFAULT NOW(),
+    last_crawled_at TIMESTAMP,
+    relevance_score INTEGER,
+    metadata JSONB,
+    raw_content TEXT,
+    parsed_data JSONB
+);
+
+CREATE INDEX idx_source_type ON raw_data_sources(source_type);
+CREATE INDEX idx_domain ON raw_data_sources(domain);
+CREATE INDEX idx_relevance ON raw_data_sources(relevance_score DESC);
+```
+
+```python
+# MongoDB пример схемы
+{
+    "url": "https://usr.minjust.gov.ua/...",
+    "source_type": "registry",
+    "domain": "minjust.gov.ua",
+    "discovered_at": ISODate("2024-01-15"),
+    "last_crawled_at": ISODate("2024-01-20"),
+    "relevance_score": 9,
+    "metadata": {
+        "page_type": "registry",
+        "keywords": ["реестр", "ЄДР"],
+        "analysis": {...}
+    },
+    "raw_content": "...",
+    "parsed_data": {...}
+}
+```
+
+### Рекомендуемая конфигурация
+
+**Для разработки:**
+
+- Кэш: SQLite
+- Хранение: SQLite или PostgreSQL (локально)
+
+**Для production:**
+
+- Кэш: Redis
+- Хранение: PostgreSQL (для структурированных данных) или MongoDB (для гибкой схемы)
+
+### Интеграция
+
+Пример использования с PostgreSQL:
+
+```python
+import psycopg2
+from crawler import LLMCrawler
+
+# Инициализация crawler с БД
+crawler = LLMCrawler()
+crawler.set_cache_backend('redis', host='localhost', port=6379)
+crawler.set_storage_backend('postgresql', 
+    host='localhost',
+    database='ukr_data',
+    user='user',
+    password='password'
+)
+
+# Crawler автоматически будет использовать БД для кэширования и хранения
+crawler.crawl(seed_urls=[...])
+```
+
 ## Структура проекта
 
-```
+```text
 UkrDeepCrawler/
 ├── crawler.py          # Основной класс LLMCrawler
 ├── llm_client.py       # Клиент для работы с LMStudio API
 ├── config.py          # Конфигурация
 ├── requirements.txt   # Зависимости
-└── README.md          # Документация
+├── README.md          # Документация
+└── ARCHITECTURE.md    # Архитектура обработки данных
 ```
+
+## Архитектура обработки данных
+
+Подробное описание архитектуры обработки данных из найденных источников с использованием LLM см. в [ARCHITECTURE.md](ARCHITECTURE.md).
+
+Основные компоненты:
+
+- **Data Loader** - загрузка данных из различных источников
+- **LLM Analyzer** - анализ и структурирование через LMStudio API
+- **Data Validator** - валидация и проверка качества
+- **Data Normalizer** - нормализация и очистка данных
+- **Schema Detector** - определение оптимальной схемы БД
+- **Data Storage** - сохранение в базы данных
 
 ## Результаты
 
 Crawler сохраняет:
+
 - Список релевантных URL с метаданными
 - Статистику обхода
 - Анализ типов источников (API, реестры, файлы данных)
-
